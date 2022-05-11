@@ -6,6 +6,11 @@ public class LookAt : MonoBehaviour
 {
     private Transform follow;
 
+    [SerializeField]
+    private bool faceAwayFromTarget = false;
+
+
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -15,8 +20,17 @@ public class LookAt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         Vector3 targetToLookAt = new Vector3(follow.position.x, follow.position.y, follow.position.z);
 
+        if(faceAwayFromTarget)
+        {
+            targetToLookAt.x *= -1;
+            targetToLookAt.y *= -1;
+        }
+
         transform.LookAt(targetToLookAt);
+
+
     }
 }

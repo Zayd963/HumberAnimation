@@ -16,15 +16,24 @@ public class FollowFace : MonoBehaviour
     [SerializeField]
     private float yClampMax = 5f;
 
+    private Transform mainCamera;
+
+    private float previousFaceSize;
+    private float currentFaceSize;
+
     // Start is called before the first frame update
     void Start()
     {
         faceTracker = GameObject.FindGameObjectWithTag("FaceTracker").GetComponent<FaceTracker>();
+        mainCamera = Camera.main.transform;
+        previousFaceSize = 1;
+        currentFaceSize = previousFaceSize;
     }
 
     // Update is called once per frame
     void Update()
     {
+        currentFaceSize = (faceTracker.faceRect.Size.Height);
         if (faceTracker.faceExists)
         {
             Vector3 facePositionOnScreen = new Vector3(faceTracker.faceRect.Center.X, faceTracker.faceRect.Center.Y,
@@ -40,7 +49,24 @@ public class FollowFace : MonoBehaviour
             transform.position = new Vector3(Mathf.Clamp(transform.position.x, xClampMin, xClampMax), 
                 Mathf.Clamp(transform.position.y, yClampMin, yClampMax),
                 transform.position.z);
+
+           
+
+          
+            float norm = (currentFaceSize - previousFaceSize);
+            float step = 5 * Time.deltaTime;
+
+            if (norm > 15 || norm < -15) 
+            {
+                mainCamera.position = Vector3.SmoothDamp(mainCamera.position, new Vector3(0, 0,
+                    Mathf.Clamp(mainCamera.position.z - norm, -3.2f, 6f)), ref refVec, 0.5f);
+            }
+            Debug.Log(norm);
+            mainCamera.position = new Vector3(0, 0, mainCamera.position.z);
+
+
         }
 
+        previousFaceSize = currentFaceSize;
     }
 }

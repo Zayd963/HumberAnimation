@@ -13,7 +13,7 @@ public class FaceTracker : MonoBehaviour
     void Start()
     {
         WebCamDevice[] devices = WebCamTexture.devices;
-        webcamTexture = new WebCamTexture(devices[0].name, 1920, 1080, 24);
+        webcamTexture = new WebCamTexture(devices[0].name, 1920, 1080, 60);
         webcamTexture.Play();
         GetComponent<Renderer>().material.mainTexture = webcamTexture;
         cascade = new CascadeClassifier(Application.streamingAssetsPath + "/haarcascade_frontalface_default.xml");
@@ -29,7 +29,7 @@ public class FaceTracker : MonoBehaviour
 
     private void FindNewFace(Mat frame)
     {
-        var faces = cascade.DetectMultiScale(frame, 1.1, 15, HaarDetectionType.ScaleImage);
+        var faces = cascade.DetectMultiScale(frame, 1.1, 10, HaarDetectionType.ScaleImage);
 
         if (faces.Length >= 1)
         {
