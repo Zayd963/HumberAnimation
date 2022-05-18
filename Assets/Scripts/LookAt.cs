@@ -23,13 +23,17 @@ public class LookAt : MonoBehaviour
 
         Vector3 targetToLookAt = new Vector3(follow.position.x, follow.position.y, follow.position.z);
 
-        if(faceAwayFromTarget)
+        if (faceAwayFromTarget)
         {
             targetToLookAt.x *= -1;
             targetToLookAt.y *= -1;
         }
 
+
         transform.LookAt(targetToLookAt);
+
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, transform.localEulerAngles.z);
+
 
 
     }
