@@ -9,6 +9,8 @@ public class FaceTracker : MonoBehaviour
     public OpenCvSharp.Rect faceRect;
     public bool faceExists = false;
 
+    [SerializeField]
+    private int minFaceNeighbours;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,7 @@ public class FaceTracker : MonoBehaviour
 
     private void FindNewFace(Mat frame)
     {
-        var faces = cascade.DetectMultiScale(frame, 1.1, 10, HaarDetectionType.ScaleImage);
+        var faces = cascade.DetectMultiScale(frame, 1.1, minFaceNeighbours, HaarDetectionType.ScaleImage);
 
         if (faces.Length >= 1)
         {
