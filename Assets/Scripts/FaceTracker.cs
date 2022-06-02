@@ -11,27 +11,33 @@ public class FaceTracker : MonoBehaviour
 
     [SerializeField]
     private int minFaceNeighbours;
+
+    [SerializeField]
+    private double standardDeviation;
     // Start is called before the first frame update
     void Start()
     {
         WebCamDevice[] devices = WebCamTexture.devices;
-        webcamTexture = new WebCamTexture(devices[0].name, 1920, 1080, 60);
+        webcamTexture = new WebCamTexture(devices[0].name, 1920, 1080);
         webcamTexture.Play();
         GetComponent<Renderer>().material.mainTexture = webcamTexture;
-        cascade = new CascadeClassifier(Application.streamingAssetsPath + "/haarcascade_frontalface_default.xml");
+        cascade = new CascadeClassifier(Application.streamingAssetsPath + "/haarcascade_eye_tree_eyeglasses.xml");
     }
 
     // Update is called once per frame
     void Update()
     {
         Mat frame = OpenCvSharp.Unity.TextureToMat(webcamTexture);
+        RemoveBackground(frame);
         FindNewFace(frame);
         Display(frame);
+
+       
     }
 
     private void FindNewFace(Mat frame)
     {
-        var faces = cascade.DetectMultiScale(frame, 1.1, minFaceNeighbours, HaarDetectionType.ScaleImage);
+        var faces = cascade.DetectMultiScale(frame,1.3, minFaceNeighbours, HaarDetectionType.FindBiggestObject);
 
         if (faces.Length >= 1)
         {
@@ -53,5 +59,11 @@ public class FaceTracker : MonoBehaviour
         else
             GetComponent<Renderer>().material.mainTexture = webcamTexture;
     }
+
+    private void RemoveBackground(Mat frame)
+    {
+        frame.GaussianBlur(new Size(0, 0), standardDeviation);
+    }
+
     
 }

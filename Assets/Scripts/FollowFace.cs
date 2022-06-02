@@ -16,14 +16,6 @@ public class FollowFace : MonoBehaviour
     [SerializeField]
     private float yClampMax = 5f;
 
-    [SerializeField]
-    private float differenceNeededToChangeCameraDepth = 15f;
-
-    [SerializeField]
-    private float cameraSmoothing = 0.5f;
-
-
-
     private Transform mainCamera;
 
     private float previousFaceSize;
@@ -45,7 +37,7 @@ public class FollowFace : MonoBehaviour
         if (faceTracker.faceExists)
         {
             Vector3 facePositionOnScreen = new Vector3(faceTracker.faceRect.Center.X, faceTracker.faceRect.Center.Y,
-                transform.position.z);
+               transform.position.z);
 
             Vector3 facePositionInWorld = Camera.main.ScreenToWorldPoint(facePositionOnScreen);
             Vector3 refVec = Vector3.zero;
@@ -61,15 +53,15 @@ public class FollowFace : MonoBehaviour
            
 
           
-            float norm = (currentFaceSize - previousFaceSize);
-            float step = 5 * Time.deltaTime;
+            //float norm = (currentFaceSize - previousFaceSize);
+            //float step = 5 * Time.deltaTime;
 
-            if (norm > differenceNeededToChangeCameraDepth || norm < -differenceNeededToChangeCameraDepth) 
-            {
-                mainCamera.position = Vector3.SmoothDamp(mainCamera.position, new Vector3(0, 0,
-                    Mathf.Clamp(mainCamera.position.z - norm, -3.2f, 6f)), ref refVec, cameraSmoothing);
-            }
-            mainCamera.position = new Vector3(0, 0, mainCamera.position.z);
+            //if (norm > differenceNeededToChangeCameraDepth || norm < -differenceNeededToChangeCameraDepth) 
+            //{
+            //    mainCamera.position = Vector3.SmoothDamp(mainCamera.position, new Vector3(0, 0,
+            //        Mathf.Clamp(mainCamera.position.z - norm, -3.2f, 6f)), ref refVec, cameraSmoothing);
+            //}
+            //mainCamera.position = new Vector3(0, 0, mainCamera.position.z);
 
 
         }
