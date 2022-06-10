@@ -24,6 +24,7 @@ EditorBuildSettings:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 7d01ebc64f3f9f24481766083862bb6e, type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f3b48794f89165340a4396e468e11a96, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 9db37ab69066bef41ba9569ef47c53bb, type: 2}
+    com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: 8e8cbeb6e4743f848ad8017c3d5e4ca5, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 5a5bff06f08b255419eb7c7a07551b95, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 3db2629df4265524197b75aee4437c93, type: 2}
     xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: 832ac451f7df7af46900ff5b376db283, type: 2}
