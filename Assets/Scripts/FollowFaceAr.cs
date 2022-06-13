@@ -8,12 +8,20 @@ public class FollowFaceAr : MonoBehaviour
 {
     private Transform face;
     public Text debugText;
+    public Text sensitivityText;
+    public Text zDepthText;
 
+    
+
+    [SerializeField]
+    private float sensitivity;
+    [SerializeField]
+    private float zDepth;
     // Start is called before the first frame update
     void Start()
     {
         
-
+        
         
     }
 
@@ -32,9 +40,32 @@ public class FollowFaceAr : MonoBehaviour
         {
             //transform.localEulerAngles = new Vector3(face.localEulerAngles.x, face.localEulerAngles.y + 180, face.localEulerAngles.z);
             Vector3 faceScreenposition = Camera.main.ViewportToScreenPoint(face.position);
-            transform.LookAt(faceScreenposition / 100);
+            faceScreenposition.z = zDepth;
+            transform.LookAt(faceScreenposition / sensitivity);
             transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
             debugText.text = faceScreenposition.ToString();
+            sensitivityText.text = sensitivity.ToString();
+            zDepthText.text = zDepth.ToString();
         }
+    }
+
+    public void AdjustSensitivityUp()
+    {
+        sensitivity += 10f;
+    }
+
+    public void AdjustSensitivityDown()
+    {
+        sensitivity -= 10f;
+    }
+
+    public void AdjustzDepthUp()
+    {
+        zDepth += 10f;
+    }
+
+    public void AdjustzDepthDown()
+    {
+        zDepth -= 10f;
     }
 }
