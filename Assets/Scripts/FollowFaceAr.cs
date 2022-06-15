@@ -14,9 +14,9 @@ public class FollowFaceAr : MonoBehaviour
     
 
     [SerializeField]
-    private float sensitivity;
+    private float sensitivity = 100;
     [SerializeField]
-    private float zDepth;
+    private float zDepth = 100;
     // Start is called before the first frame update
     void Start()
     {
