@@ -15,18 +15,11 @@ public class ModelManager : MonoBehaviour
     public float timeToSwitchModels = 5f;
 
     private int currentModelIndex = 0;
+   
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        timer += Time.deltaTime;
-
-        for(int i = 0; i < models.Length; i++)
+        for (int i = 0; i < models.Length; i++)
         {
             if (i == currentModelIndex)
             {
@@ -36,9 +29,29 @@ public class ModelManager : MonoBehaviour
                 models[i].SetActive(false);
 
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        timer += Time.deltaTime;
+
+      
 
         if (timer > timeToSwitchModels)
         {
+            for (int i = 0; i < models.Length; i++)
+            {
+                if (i == currentModelIndex)
+                {
+                    models[i].SetActive(true);
+
+                }
+                else
+                    models[i].SetActive(false);
+
+
+            }
             smoke.Play();
             if (currentModelIndex < models.Length - 1)
             {
@@ -48,11 +61,12 @@ public class ModelManager : MonoBehaviour
             {
                 currentModelIndex = 0;
             }
-            
+
+           
             timer = 0;
         }
 
-        Debug.Log(timer);
+        Debug.Log(currentModelIndex);
     }
 
     private IEnumerator ChangeModel()
