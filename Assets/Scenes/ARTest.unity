@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 816b289ef451e094f9ae174fb4cf8db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UseCustomMaterial: 1
+  m_UseCustomMaterial: 0
   m_CustomMaterial: {fileID: 2100000, guid: 0d6916986c58f6847b9c7879d7e65467, type: 2}
 --- !u!114 &33260536
 MonoBehaviour:
@@ -553,6 +553,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0bc3d3e6eb74554385fbb31ee6b5ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugText: {fileID: 1369598553}
+  sensitivityText: {fileID: 1492338769}
+  zDepthText: {fileID: 89416250}
   sphere: {fileID: 454198154}
   sensitivity: 100
   zDepth: 100
@@ -785,6 +788,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0bc3d3e6eb74554385fbb31ee6b5ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugText: {fileID: 1369598553}
+  sensitivityText: {fileID: 1492338769}
+  zDepthText: {fileID: 89416250}
   sphere: {fileID: 454198154}
   sensitivity: 100
   zDepth: 100
@@ -1216,7 +1222,67 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 160270401}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustSensitivityDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 439992165}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustSensitivityDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1873998486}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustSensitivityDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1630386112}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustSensitivityDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 932621197}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustSensitivityDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1246239592}
         m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
         m_MethodName: AdjustSensitivityDown
         m_Mode: 1
@@ -1388,6 +1454,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0bc3d3e6eb74554385fbb31ee6b5ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugText: {fileID: 1369598553}
+  sensitivityText: {fileID: 1492338769}
+  zDepthText: {fileID: 89416250}
   sphere: {fileID: 454198154}
   sensitivity: 100
   zDepth: -100
@@ -1941,7 +2010,67 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 160270401}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustzDepthUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 439992165}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustzDepthUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1873998486}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustzDepthUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1630386112}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustzDepthUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 932621197}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustzDepthUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1246239592}
         m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
         m_MethodName: AdjustzDepthUp
         m_Mode: 1
@@ -2020,6 +2149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0bc3d3e6eb74554385fbb31ee6b5ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugText: {fileID: 1369598553}
+  sensitivityText: {fileID: 1492338769}
+  zDepthText: {fileID: 89416250}
   sphere: {fileID: 454198154}
   sensitivity: 100
   zDepth: 100
@@ -2062,7 +2194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1250503416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2461,6 +2593,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0bc3d3e6eb74554385fbb31ee6b5ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugText: {fileID: 1369598553}
+  sensitivityText: {fileID: 1492338769}
+  zDepthText: {fileID: 89416250}
   sphere: {fileID: 454198154}
   sensitivity: 100
   zDepth: 100
@@ -2699,7 +2834,67 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 160270401}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustSensitivityUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 439992165}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustSensitivityUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1873998486}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustSensitivityUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1630386112}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustSensitivityUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 932621197}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustSensitivityUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1246239592}
         m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
         m_MethodName: AdjustSensitivityUp
         m_Mode: 1
@@ -2845,6 +3040,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0bc3d3e6eb74554385fbb31ee6b5ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugText: {fileID: 1369598553}
+  sensitivityText: {fileID: 1492338769}
+  zDepthText: {fileID: 89416250}
   sphere: {fileID: 454198154}
   sensitivity: 100
   zDepth: 100
@@ -2931,7 +3129,67 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 160270401}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustzDepthDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 439992165}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustzDepthDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1873998486}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustzDepthDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1630386112}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustzDepthDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 932621197}
+        m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
+        m_MethodName: AdjustzDepthDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1246239592}
         m_TargetAssemblyTypeName: FollowFaceAr, Assembly-CSharp
         m_MethodName: AdjustzDepthDown
         m_Mode: 1

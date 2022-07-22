@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class FollowFaceAr : MonoBehaviour
 {
     private Transform face;
-    //public Text debugText;
-    //public Text sensitivityText;
-    //public Text zDepthText;
+    public Text debugText;
+    public Text sensitivityText;
+    public Text zDepthText;
 
     [SerializeField]
     private Transform sphere;
@@ -45,9 +45,9 @@ public class FollowFaceAr : MonoBehaviour
             Vector3 look = faceScreenposition / sensitivity;
             transform.LookAt(look);
             transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
-            //debugText.text = faceScreenposition.ToString();
-            //sensitivityText.text = sensitivity.ToString();
-            //zDepthText.text = zDepth.ToString();
+            debugText.text = faceScreenposition.ToString();
+            sensitivityText.text = sensitivity.ToString();
+            zDepthText.text = zDepth.ToString();
 
             sphere.position = new Vector3(look.x, 0, 10);
         }
